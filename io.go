@@ -359,7 +359,7 @@ var genbankDivisions = []string{
 	"ENV", //environmental sampling sequences
 }
 
-var genBankMoleculeTypes = []string{
+var genbankMoleculeTypes = []string{
 	"DNA",
 	"genomic DNA",
 	"genomic RNA",
@@ -707,7 +707,7 @@ func parseLocus(locusString string) Locus {
 	}
 
 	// molecule type
-	for _, moleculeType := range genBankMoleculeTypes {
+	for _, moleculeType := range genbankMoleculeTypes {
 		moleculeRegex, _ := regexp.Compile(moleculeType)
 		match := string(moleculeRegex.Find([]byte(locusString)))
 		if match != "" {
